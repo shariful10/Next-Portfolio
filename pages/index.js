@@ -27,12 +27,9 @@ const Home = () => {
 						initial="hidden"
 						animate="show"
 						exit="hidden"
-						className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+						className="text-white max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-xl"
 					>
-						lorem ipsum dolor sit amet, consectetur adip nonum, sed
-						do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim ven quis nostrud ex ea commodo
-						consequat.
+						Hi, I am Md. Shariful Islam. I am a passionate Web Developer with expertise in MERN Stack Development. I strive to create visually appealing and user-friendly websites that work seamlessly across devices. I stay updated with the latest industry trends and enjoy collaborating with clients to deliver modern and innovative solutions.
 					</motion.p>
 					{/* <====<<==== Button ====>>====> */}
 					<div className="flex justify-center xl:hidden relative">
@@ -54,7 +51,7 @@ const Home = () => {
 				{/* <====<<==== Image ====>>====> */}
 				<div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
 				{/* <====<<==== Particles ====>>====> */}
-				<ParticlesContainer />
+				{/* <ParticlesContainer /> */}
 				{/* <====<<==== Avatar Img ====>>====> */}
 				<motion.div
 					variants={fadeIn("up", 0.5)}
