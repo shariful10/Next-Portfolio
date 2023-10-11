@@ -1,7 +1,10 @@
 /* eslint-disable react/jsx-key */
-// icons
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "./../../variants";
 import Circles from "../../components/Circles";
+import Avatar from "./../../components/Avatar";
+
 import {
 	FaHtml5,
 	FaCss3,
@@ -96,6 +99,17 @@ const About = () => {
 	return (
 		<div>
 			<Circles />
+			{/* <====<<==== Avatar ====>>====> */}
+			<motion.div
+				variants={fadeIn("right", 0.2)}
+				initial="hidden"
+				animate="show"
+				exit="hidden"
+				className="hidden xl:flex absolute bottom-0 -left-[370px]"
+			>
+				<Avatar />
+			</motion.div>
+			<div className=''></div>
 		</div>
 	);
 };
