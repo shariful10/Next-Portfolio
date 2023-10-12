@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "./../../variants";
 import Circles from "../../components/Circles";
 import Avatar from "./../../components/Avatar";
+import { BiLogoTypescript } from "react-icons/bi";
 
 import {
 	FaHtml5,
@@ -11,17 +12,18 @@ import {
 	FaJs,
 	FaReact,
 	FaWordpress,
-	FaFigma,
+	FaElementor,
+	FaBootstrap,
 } from "react-icons/fa";
 
 import {
 	SiNextdotjs,
 	SiFramer,
-	SiAdobexd,
 	SiAdobephotoshop,
+	SiTailwindcss,
 } from "react-icons/si";
 
-//  data
+// <====<<==== Data ====>>====>
 export const aboutData = [
 	{
 		title: "skills",
@@ -31,16 +33,23 @@ export const aboutData = [
 				icons: [
 					<FaHtml5 />,
 					<FaCss3 />,
+					<FaBootstrap />,
+					<SiTailwindcss />,
 					<FaJs />,
+					<BiLogoTypescript />,
 					<FaReact />,
 					<SiNextdotjs />,
 					<SiFramer />,
-					<FaWordpress />,
 				],
 			},
 			{
-				title: "UI/UX Design",
-				icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+				title: "Wordpress",
+				icons: [
+					<FaWordpress />,
+					,
+					<FaElementor />,
+					<SiAdobephotoshop />,
+				],
 			},
 		],
 	},
@@ -61,11 +70,11 @@ export const aboutData = [
 		title: "experience",
 		info: [
 			{
-				title: "UX/UI Designer - XYZ Company",
+				title: "Web Developer - XYZ Company",
 				stage: "2022 - 2023",
 			},
 			{
-				title: "Web Developer - XYZ Company",
+				title: "Wordpress - fiverr",
 				stage: "2022 - 2023",
 			},
 			// {
@@ -97,7 +106,7 @@ const About = () => {
 	const [index, setIndex] = useState(0);
 
 	return (
-		<div className="h-screen bg-primary/30 py-32 text-center xl:text-left">
+		<div className="h-screen bg-primary/30 text-center xl:text-left">
 			<Circles />
 			{/* <====<<==== Avatar ====>>====> */}
 			<motion.div
@@ -109,9 +118,9 @@ const About = () => {
 			>
 				<Avatar />
 			</motion.div>
-			<div className="container mx-auto h-screen flex flex-col items-center xl:flex-row gap-x-6">
-				<div>text</div>
-				<div>
+			<div className="container mx-auto h-screen py-32 flex flex-col items-center xl:flex-row gap-x-6">
+				<div className="flex-1 flex flex-col justify-center">text</div>
+				<div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
 					<div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
 						{aboutData.map((item, i) => {
 							return (
@@ -128,12 +137,22 @@ const About = () => {
 							);
 						})}
 					</div>
-					<div>
+					<div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
 						{aboutData[index].info.map((item, i) => {
-							return <div key={i}>
-								{/* <====<<==== Title ====>>====> */}
-								<div>{item.title}</div>
-							</div>
+							return (
+								<div key={i} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
+									{/* <====<<==== Title ====>>====> */}
+									<div>{item.title}</div>
+									<div className="hidden md:flex">-</div>
+									<div>{item.stage}</div>
+									<div className="flex gap-x-4">
+									{/* <====<<==== Icons ====>>====> */}
+									{item.icons?.map((icon, i) => {
+										return <div key={i} className="text-2xl transition-all duration-500">{icon}</div>;
+									})}
+									</div>
+								</div>
+							);
 						})}
 					</div>
 				</div>
