@@ -118,8 +118,12 @@ const About = () => {
 			>
 				<Avatar />
 			</motion.div>
-			<div className="container mx-auto h-screen py-32 flex flex-col items-center xl:flex-row gap-x-6">
-				<div className="flex-1 flex flex-col justify-center">text</div>
+			<div className="container mx-auto md:h-screen py-32 flex flex-col items-center xl:flex-row gap-x-6">
+				<div className="flex-1 flex flex-col justify-center">
+					<h2 className="h2">Captivating <span className="text-accent">stories</span>birth magnificent design.</h2>
+					<p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">10 years ago, I began freelancing as a developer. Since then, I&apos;ve done remote work for agencies, counsulted for startups, and collaborated on digital products for business and consumer use.</p>
+					{/* <====<<==== Counters ====>>====> */}
+				</div>
 				<div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
 					<div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
 						{aboutData.map((item, i) => {
@@ -142,13 +146,13 @@ const About = () => {
 							return (
 								<div key={i} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
 									{/* <====<<==== Title ====>>====> */}
-									<div>{item.title}</div>
+									<div className="font-light mb-2 md:mb-0">{item.title}</div>
 									<div className="hidden md:flex">-</div>
 									<div>{item.stage}</div>
 									<div className="flex gap-x-4">
 									{/* <====<<==== Icons ====>>====> */}
 									{item.icons?.map((icon, i) => {
-										return <div key={i} className="text-2xl transition-all duration-500">{icon}</div>;
+										return <div key={i} className="text-2xl text-white">{icon}</div>;
 									})}
 									</div>
 								</div>
