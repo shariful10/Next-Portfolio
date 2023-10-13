@@ -1,4 +1,3 @@
-// icons
 import {
   RxCrop,
   RxPencil2,
@@ -7,8 +6,7 @@ import {
   RxRocket,
 } from "react-icons/rx";
 
-
-// data
+// <====<<==== Data ====>>====>
 const serviceData = [
   {
     icon: <RxCrop />,
