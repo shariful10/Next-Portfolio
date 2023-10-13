@@ -123,53 +123,89 @@ const About = () => {
 				<Avatar />
 			</motion.div>
 			<div className="container mx-auto md:h-screen py-32 flex flex-col items-center xl:flex-row gap-x-6">
+				{/* <====<<==== Text ====>>====> */}
 				<div className="flex-1 flex flex-col justify-center">
-					<h2 className="h2">
-						Captivating{" "}
-						<span className="text-accent">stories </span>birth
+					<motion.h2
+						variants={fadeIn("right", 0.2)}
+						initial="hidden"
+						animate="show"
+						exit="hidden"
+						className="h2"
+					>
+						Captivating
+						<span className="text-accent"> stories </span>birth
 						magnificent design.
-					</h2>
-					<p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
+					</motion.h2>
+					<motion.p
+						variants={fadeIn("right", 0.4)}
+						initial="hidden"
+						animate="show"
+						exit="hidden"
+						className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+					>
 						10 years ago, I began freelancing as a developer. Since
 						then, I&apos;ve done remote work for agencies,
 						counsulted for startups, and collaborated on digital
 						products for business and consumer use.
-					</p>
+					</motion.p>
 					{/* <====<<==== Counters ====>>====> */}
-					<div>
+					<motion.div
+						variants={fadeIn("right", 0.6)}
+						initial="hidden"
+						animate="show"
+						exit="hidden"
+						className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+					>
 						<div className="flex flex-1 xl:gap-x-6">
 							{/* <====<<==== Experience ====>>====> */}
 							<div className="relative flex-1 after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
 								<div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
 									<CountUp start={0} end={2} duration={5} /> +
 								</div>
-								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Years of experience</div>
+								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+									Years of experience
+								</div>
 							</div>
 							{/* <====<<==== Clients ====>>====> */}
 							<div className="relative flex-1 after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
 								<div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-									<CountUp start={0} end={250} duration={5} /> +
+									<CountUp start={0} end={250} duration={5} />{" "}
+									+
 								</div>
-								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Satisfied clients</div>
+								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+									Satisfied clients
+								</div>
 							</div>
 							{/* <====<<==== Projects ====>>====> */}
 							<div className="relative flex-1 after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
 								<div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-									<CountUp start={0} end={100} duration={5} /> +
+									<CountUp start={0} end={100} duration={5} />{" "}
+									+
 								</div>
-								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Finished Projects</div>
+								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+									Finished Projects
+								</div>
 							</div>
 							{/* <====<<==== Awards ====>>====> */}
 							<div className="relative flex-1">
 								<div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
 									<CountUp start={0} end={1} duration={5} /> +
 								</div>
-								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Winning Awards</div>
+								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+									Winning Awards
+								</div>
 							</div>
 						</div>
-					</div>
+					</motion.div>
 				</div>
-				<div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+				{/* <====<<==== Info ====>>====> */}
+				<motion.div
+					variants={fadeIn("left", 0.4)}
+					initial="hidden"
+					animate="show"
+					exit="hidden"
+					className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+				>
 					<div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
 						{aboutData.map((item, i) => {
 							return (
@@ -178,7 +214,7 @@ const About = () => {
 									onClick={() => setIndex(i)}
 									className={`${
 										index === i &&
-										"text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+										"text-accent after:w-[100%] after:bg-red-600 after:transition-all after:duration-300"
 									} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
 								>
 									{item.title}
@@ -216,7 +252,7 @@ const About = () => {
 							);
 						})}
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
