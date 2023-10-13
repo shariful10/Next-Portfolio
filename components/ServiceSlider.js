@@ -1,42 +1,48 @@
+import { Swiper, SwiperSlider } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { FreeMode, Pagination } from "swiper";
 import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
+	RxCrop,
+	RxPencil2,
+	RxDesktop,
+	RxReader,
+	RxRocket,
+	RxArrowTopRight,
 } from "react-icons/rx";
 
 // <====<<==== Data ====>>====>
 const serviceData = [
-  {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
+	{
+		icon: <RxCrop />,
+		title: "Branding",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	},
+	{
+		icon: <RxPencil2 />,
+		title: "Design",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	},
+	{
+		icon: <RxDesktop />,
+		title: "Development",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	},
+	{
+		icon: <RxReader />,
+		title: "Copywriting",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	},
+	{
+		icon: <RxRocket />,
+		title: "SEO",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	},
 ];
 
 const ServiceSlider = () => {
-  return <div>Service Slider</div>;
+	return <div>Service Slider</div>;
 };
 
 export default ServiceSlider;
