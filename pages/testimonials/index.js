@@ -1,8 +1,8 @@
 const Testimonials = () => {
 	return (
 		<div className="h-screen bg-primary/30 py-32 text-center">
-			<div className="container mx-auto h-full flex flex-col">
-				<h2>
+			<div className="container mx-auto h-full flex flex-col justify-center">
+				<h2 className="h2">
 					What clients <span className="text-accent">say.</span>
 				</h2>
 			</div>
