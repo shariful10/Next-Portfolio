@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import { BsArrowRight } from "react-icons/bs";
+import { FaQuoteLeft } from "react-icons/fa";
 import Image from "next/image";
 
 // <====<<==== Data ====>>====>
@@ -49,14 +49,21 @@ const TestimonialSlider = () => {
 								<div>
 									{/* <===<<=== Avatar ===>>===> */}
 									<div>Avatar</div>
-									{/* <===<<=== Avatar ===>>===> */}
+									{/* <===<<=== Name ===>>===> */}
 									<div>Name</div>
 									{/* <===<<=== Position ===>>===> */}
 									<div>Position</div>
 								</div>
 							</div>
 							{/* <==<<=== Quote & Message ===>>==> */}
-							<div>Quote & Message</div>
+							<div>
+								{/* <==<<=== Quote Icon ===>>==> */}
+								<div className="mb-4">
+									<FaQuoteLeft className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0" />
+								</div>
+								{/* <==<<=== Message ===>>==> */}
+								<div>{person.message}</div>
+							</div>
 						</div>
 					</SwiperSlide>
 				);
