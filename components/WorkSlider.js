@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import {BsArrowRight} from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
 
 // <====<<==== Data ====>>====>
@@ -59,7 +59,7 @@ const WorkSlider = () => {
 				clickable: true,
 			}}
 			modules={[Pagination]}
-			className="mySwiper h-[280px] sm:h-[480px]"
+			className="mySwiper h-[320px] sm:h-[480px]"
 		>
 			{workSlides.slides.map((slide, i) => {
 				return (
@@ -83,11 +83,17 @@ const WorkSlider = () => {
 												<div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
 													<div className="flex items-center gap-x-2 text-[13px] tracking-[0.2rem]">
 														{/* Title Part 1 */}
-														<div className="delay-100">LIVE</div>
+														<div className="delay-100">
+															LIVE
+														</div>
 														{/* Title Part 2 */}
-														<div className="translate-y-[500%] group-hover:translate-y-0">PROJECT</div>
+														<div className="translate-y-[500%] group-hover:translate-y-0">
+															PROJECT
+														</div>
 														{/* <===<<=== Icon ===>>===> */}
-														<div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200"><BsArrowRight/></div>
+														<div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+															<BsArrowRight />
+														</div>
 													</div>
 												</div>
 											</div>
