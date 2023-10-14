@@ -43,12 +43,14 @@ const TestimonialSlider = () => {
 			{testimonialData.map((person, i) => {
 				return (
 					<SwiperSlide key={i}>
-						<div>
+						<div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
 							{/* <==<<=== Avatar, Name, Position ===>>==> */}
-							<div>
-								<div>
+							<div className="w-full max-w-[300px] flex flex-col xl:justify-center item-center relative mx-auto xl:mx-0">
+								<div className="flex flex-col justify-center item-center">
 									{/* <===<<=== Avatar ===>>===> */}
-									<div>Avatar</div>
+									<div>
+										<Image src={person.image} width={100} height={100} alt='' />
+									</div>
 									{/* <===<<=== Name ===>>===> */}
 									<div>Name</div>
 									{/* <===<<=== Position ===>>===> */}
@@ -56,7 +58,7 @@ const TestimonialSlider = () => {
 								</div>
 							</div>
 							{/* <==<<=== Quote & Message ===>>==> */}
-							<div className="bg-pink-500/10 flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
+							<div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
 								{/* <==<<=== Quote Icon ===>>==> */}
 								<div className="mb-4">
 									<FaQuoteLeft className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0" />
