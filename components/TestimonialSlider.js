@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { FaQuoteLeft } from "react-icons/fa";
 import Image from "next/image";
 
@@ -12,32 +12,32 @@ const testimonialData = [
 		name: "Anne Smith",
 		position: "Customer",
 		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+			"Bistro Boss Restaurant's website is a visual feast. With its sleek design and seamless navigation, it's a delight to explore. The enticing menu and commitment to local ingredients make it a promising culinary destination.",
 	},
 	{
 		image: "/t-avt-2.png",
-		name: "Jane Doe",
+		name: "Janifar Laurance",
 		position: "Customer",
 		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+			"Lawyer Justice's website is a user-friendly and professional platform that instills confidence in their legal expertise. With its clean design and organized layout, it's easy to find the information and services needed. A reliable resource for legal assistance.",
 	},
 	{
 		image: "/t-avt-3.png",
 		name: "Jhon Doe",
 		position: "Customer",
 		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+			"Sports Gear's cricket training website is a game-changer for cricket enthusiasts. With its extensive collection of top-quality gear and user-friendly interface, it's the ultimate destination for elevating your cricket skills. Find everything you need to excel on the field and take your game to new heights.",
 	},
 ];
 
 const TestimonialSlider = () => {
 	return (
 		<Swiper
-			spaceBetween={10}
+			navigation={true}
 			pagination={{
 				clickable: true,
 			}}
-			modules={[Pagination]}
+			modules={[Navigation, Pagination]}
 			className="mySwiper h-[320px] sm:h-[480px]"
 		>
 			{testimonialData.map((person, i) => {
@@ -48,13 +48,13 @@ const TestimonialSlider = () => {
 							<div className="w-full max-w-[300px] flex flex-col xl:justify-center item-center relative mx-auto xl:mx-0">
 								<div className="flex flex-col justify-center item-center">
 									{/* <===<<=== Avatar ===>>===> */}
-									<div>
+									<div className="mb-2 mx-auto">
 										<Image src={person.image} width={100} height={100} alt='' />
 									</div>
 									{/* <===<<=== Name ===>>===> */}
-									<div>Name</div>
-									{/* <===<<=== Position ===>>===> */}
-									<div>Position</div>
+									<div className="text-lg">{person.name}</div>
+									{/* <==<<=== Position ===>>==> */}
+									<div className="text-[12px] uppercase font-extralight tracking-widest">{person.position}</div>
 								</div>
 							</div>
 							{/* <==<<=== Quote & Message ===>>==> */}
