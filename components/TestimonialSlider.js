@@ -1,9 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
-import { FaQuoteLeft } from "react-icons/fa";
 import Image from "next/image";
+import { FaQuoteLeft } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
 // <====<<==== Data ====>>====>
 const testimonialData = [
@@ -38,7 +39,7 @@ const TestimonialSlider = () => {
 				clickable: true,
 			}}
 			modules={[Navigation, Pagination]}
-			className="mySwiper h-[320px] sm:h-[480px]"
+			className="mySwiper h-[550px] sm:h-[400px]"
 		>
 			{testimonialData.map((person, i) => {
 				return (
